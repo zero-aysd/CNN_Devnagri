@@ -31,11 +31,6 @@
   display: block !important; }
 
 
-#chart_box {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px; 
-}
 
 .btn{
   width: 150px;
@@ -52,8 +47,13 @@
   border: 1px solid #fad1d1;
 }
 
-@media screen and (max-width: 767px) {
-    #chart_box {
-      padding: 5px; 
-    } 
+#result-box {
+  background-color: black;
+  color: aqua;
+  height: 100;
+  width: 100;
+  font-size: 3rem;
+  border: 15px solid burlywood;
+  padding: 50px;
+  margin: 20px;
 }

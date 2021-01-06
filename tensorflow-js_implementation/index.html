@@ -6,23 +6,30 @@
     <title>CNN_Devnagri_Canvas</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >    
-    <link rel="stylesheet" type="text/css" href="digit.css">
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="chart.min.js"></script>
+ 
 </head>
 <body>
+	<script src="{{ url_for('static', filename='js/chart.min.js')}}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/digit.css')}}">
 	<main>
 		<div class="container mt-1">
 			<div class="digit-demo-container">
+<!-- <<<<<<< HEAD -->
+				
+<!-- ======= -->
 				<h2>Hand Written Devnagri Recognition</h2>
+<!-- >>>>>>> data preprocessing -->
 					<div class="flex-two">
 						<div id="canvas_box_wrapper" class="canvas-box-wrapper">
 							<div id="canvas_box" class="canvas-box" style="height: 500; width: 500;"></div>
+							<div class="result-box" id="result-box" ></div>
 							<div class="col-12">
 								<button id="clear-button" class="btn btn-dark">Clear</button>
 							</div>
 							<div class="col-12">
-								<button id="predict-button" class="btn btn-dark">Predict</button>
+								<button id="predict-button" class="btn btn-dark" action="{{ url_for('get_image')}}" method='POST'>Predict</button>
 							</div>
 						</div>
 						<div class="col-6">
@@ -36,6 +43,6 @@
 		</div>
 	</main>   
 
-	<script src="recognition.js"></script>
+	<script type='text/javascript' src="{{ url_for('static',filename='js/recognition.js') }}"></script>
 </body>
 </html>
