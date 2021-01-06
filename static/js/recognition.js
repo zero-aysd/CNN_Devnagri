@@ -178,6 +178,7 @@ $("#clear-button").click(async function () {
 	clickD = new Array();
 	$(".prediction-text").empty();
     $("#result_box").addClass('d-none');
+    var result = '';
     console.clear();
 });
 
@@ -198,9 +199,11 @@ $("#predict-button").click(async function(){
     return response.text();
 
 }).then(function (text) {
+    var result = text
+    document.getElementById('result-box').innerHTML = result;
     console.log(text);
 })
            
-// >>>>>>> data preprocessing
+
 });
 
