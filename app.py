@@ -62,7 +62,7 @@ with open('class_labels.json', 'r') as f:
 # inverting class labels dict
 
 inv_class_labels = {v: k for k, v in class_labels.items()}
-labels = pd.read_csv('./archive/labels.csv')
+labels = pd.read_csv('labels.csv')
 
 
 def devanagri_label(label):
